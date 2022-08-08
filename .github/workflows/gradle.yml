@@ -492,9 +492,6 @@ jobs:
       - name: Run End-to-End Acceptance Tests
         run: ./tools/bin/acceptance_test.sh
 
-      - name: Automatic Migration Acceptance Test
-        run: SUB_BUILD=PLATFORM ./gradlew :airbyte-tests:automaticMigrationAcceptanceTest --scan -i
-
   # In case of self-hosted EC2 errors, remove this block.
   stop-platform-build-runner:
     name: "Platform: Stop Build EC2 Runner"
